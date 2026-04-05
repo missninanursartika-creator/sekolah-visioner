@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="bg-white rounded-2xl p-8 shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Email</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email</label>
               <input
                 type="email"
                 name="email"
@@ -61,12 +61,12 @@ export default function LoginPage() {
                 onChange={handleChange}
                 placeholder="email@sekolah.sch.id"
                 required
-                className="w-full px-4 py-2.5 border border-slate-900 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Password</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Password</label>
               <input
                 type="password"
                 name="password"
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 onChange={handleChange}
                 placeholder="Password Anda"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 

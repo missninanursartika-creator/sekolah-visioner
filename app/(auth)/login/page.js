@@ -61,7 +61,7 @@ export default function LoginPage() {
                 onChange={handleChange}
                 placeholder="email@sekolah.sch.id"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-900 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 

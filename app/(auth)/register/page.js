@@ -46,7 +46,8 @@ export default function RegisterPage() {
       return
     }
 
-    router.push('/verify?email=' + encodeURIComponent(form.email))
+    router.push('/dashboard')
+    router.refresh()
   }
 
   return (
@@ -64,7 +65,7 @@ export default function RegisterPage() {
         <div className="bg-white rounded-2xl p-8 shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Nama Lengkap</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap</label>
               <input
                 type="text"
                 name="full_name"
@@ -72,12 +73,12 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="cth: Budi Santoso"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Nama Sekolah</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nama Sekolah</label>
               <input
                 type="text"
                 name="school_name"
@@ -85,12 +86,12 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="cth: SDN Harapan Bangsa"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Email</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email</label>
               <input
                 type="email"
                 name="email"
@@ -98,12 +99,12 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="email@sekolah.sch.id"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Password</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Password</label>
               <input
                 type="password"
                 name="password"
@@ -112,7 +113,7 @@ export default function RegisterPage() {
                 placeholder="Minimal 8 karakter"
                 minLength={8}
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
               />
             </div>
 

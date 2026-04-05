@@ -64,7 +64,7 @@ export default function RegisterPage() {
         <div className="bg-white rounded-2xl p-8 shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Nama Lengkap</label>
               <input
                 type="text"
                 name="full_name"
@@ -77,7 +77,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nama Sekolah</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Nama Sekolah</label>
               <input
                 type="text"
                 name="school_name"
@@ -90,7 +90,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Email</label>
               <input
                 type="email"
                 name="email"
@@ -103,7 +103,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">Password</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-1.5">Password</label>
               <input
                 type="password"
                 name="password"

@@ -9,11 +9,11 @@ const DUITKU_BASE_URL = process.env.DUITKU_ENV === 'production'
 const PLANS = {
   pro_monthly: {
     name: 'Sekolah Visioner Pro — Bulanan',
-    amount: 299000,
+    amount: 10000,
   },
   pro_yearly: {
     name: 'Sekolah Visioner Pro — Tahunan',
-    amount: 2490000,
+    amount: 399000,
   },
 }
 

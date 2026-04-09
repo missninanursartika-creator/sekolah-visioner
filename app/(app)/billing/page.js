@@ -56,16 +56,49 @@ function BillingContent() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    async function load() {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) return
-      const { data: p } = await supabase.from('profiles').select('*').eq('id', user.id).single()
-      setProfile(p)
-      const { data: pay } = await supabase.from('payments').select('*').eq('user_id', user.id).order('created_at', { ascending: false }).limit(5)
-      setPayments(pay || [])
+  async function load() {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+
+    // Jika baru bayar, cek status payment terbaru
+    if (status === 'success') {
+      const { data: latestPayment } = await supabase
+        .from('payments')
+        .select('*')
+        .eq('user_id', user.id)
+        .eq('status', 'pending')
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .single()
+
+      if (latestPayment) {
+        // Update manual ke paid
+        await supabase
+          .from('payments')
+          .update({ status: 'paid' })
+          .eq('id', latestPayment.id)
+
+        // Upgrade user ke pro
+        await supabase
+          .from('profiles')
+          .update({ plan: 'pro' })
+          .eq('id', user.id)
+      }
     }
-    load()
-  }, [])
+
+    const { data: p } = await supabase.from('profiles').select('*').eq('id', user.id).single()
+    setProfile(p)
+
+    const { data: pay } = await supabase
+      .from('payments')
+      .select('*')
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false })
+      .limit(5)
+    setPayments(pay || [])
+  }
+  load()
+}, [status])
 
   const handleUpgrade = async (planId) => {
     setLoading(planId)

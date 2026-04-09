@@ -17,7 +17,7 @@ const plans = [
   {
     id: 'pro_monthly',
     name: 'Pro Bulanan',
-    price: 299000,
+    price: 10000,
     period: '/bulan',
     features: [
       'Sekolah tidak terbatas',
@@ -32,9 +32,9 @@ const plans = [
   {
     id: 'pro_yearly',
     name: 'Pro Tahunan',
-    price: 2490000,
+    price: 490000,
     period: '/tahun',
-    savings: 'Hemat Rp 1.098.000',
+    savings: 'Hemat Rp 598.000',
     features: [
       'Semua fitur Pro Bulanan',
       'Hemat 31% dibanding bulanan',

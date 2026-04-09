@@ -51,7 +51,7 @@ export async function POST(request) {
       email: user.email,
       customerVaName: profile?.full_name || user.email,
       phoneNumber: '',
-      paymentMethod: 'VA',
+      paymentMethod: 'SP',
       itemDetails: [{
         name: planData.name,
         price: amount,

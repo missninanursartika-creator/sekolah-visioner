@@ -52,7 +52,7 @@ const payload = {
   email: user.email,
   customerVaName: profile?.full_name || user.email,
   phoneNumber: '',
-  paymentMethod: 'VC', // VC = semua metode pembayaran
+  paymentMethod: 'VA', // Virtual Account semua bank
   itemDetails: [{
     name: planData.name,
     price: amount,
